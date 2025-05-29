@@ -12,8 +12,8 @@ website:
         text: About Me
       - href: projects.qmd
         text: Projects
-      - href: free.html
+      - href: free.qmd
         text: Free For All
-      - href: resume.html
+      - href: resume.qmd
         text: Resume
 
