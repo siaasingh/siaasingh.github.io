@@ -1,7 +1,3 @@
-project:
-  type: website
-  output-dir: docs
-
 website:
   title: "Siaa Singh"
   navbar:
@@ -12,8 +8,7 @@ website:
         text: About Me
       - href: projects.qmd
         text: Projects
-      - href: Free.qmd
+      - href: free.qmd
         text: Free For All
-      - href: Resume.qmd
+      - href: resume.qmd
         text: Resume
-
