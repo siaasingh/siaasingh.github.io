@@ -1,11 +1,23 @@
 ---
-title: "siaasingh.github.io"
+title: "Welcome!"
+format: html
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
+```{}
 ```
+
+---
+
+---
+
+![](images/siaa.jpeg){width="250px"}
+
+# Hi, I’m Siaa 👋
+
+I’m a senior Environmental Science major at UC Santa Barbara passionate about data-driven solutions for clean energy and environmental equity.
+
+-   🌱 Intern \@ California Energy Commission (Transportation Electrification)
+-   📚 Projects: Environmental Justice in UCSB curriculum, Micro Grids as mitigation strategies in the Global South
+-   🌍 Interested in energy access, marine conservation, and climate policy
+
+This site is a portfolio of my work and interests — feel free to explore!

@@ -1,9 +1,48 @@
 ---
-title: "About"
+title: "About Me"
+format: html
 ---
 
-About this site
+## 🌍 Between Continents
 
-```{r}
-1 + 1
-```
+I grew up between India and the Bay Area — and that cross-cultural experience shaped how I see people, place, and the planet.  
+It taught me that environmentalism is deeply personal and often rooted in how we connect to community and place.
+
+Travel has been a huge part of my life — from Kerala’s backwaters to Santa Barbara's coastline, I’ve found meaning in motion. Whether it’s through cultural festivals or street food, I love learning about the world through lived experiences.
+
+![](images/india.jpeg){width=300px}
+
+
+---
+
+## 💃 Dance and Movement 
+
+I have always been the type to never sit still. I grew up playing Table Tennis, Soccer and Water Polo. In college I joined UCSB Taara - a nationally competitive bollywood fusion dance team. This has been a great way to connect with my culture while also finding value in movement. I also love working out in particular Yoga Sculpts and hope to become an instructor one day! 
+
+![Taara Performance](./images/dance2.jpg){width=300px}
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+## 🌊 Marine Life & SCUBA
+
+Becoming a certified diver opened my eyes to the fragility of marine ecosystems.  
+Having now completed over 50 dives, they have helped deepen my commitment to protecting coral reef and island ecosystems. 
+
+![](images/scuba.JPG){width=300px}
+
+
+
+
+
+
