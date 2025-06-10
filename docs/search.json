@@ -7,43 +7,43 @@
     "text": "Hi, I’m Siaa 👋\nI’m a senior Environmental Science major at UC Santa Barbara passionate about data-driven solutions for clean energy and environmental equity.\n\n🌱 Intern @ California Energy Commission (Transportation Electrification)\n📚 Projects: Environmental Justice in UCSB curriculum, Micro Grids as mitigation strategies in the Global South\n🌍 Interested in energy access, marine conservation, and climate policy\n\nThis site is a portfolio of my work and interests — feel free to explore!"
   },
   {
-    "objectID": "projects/ceew analysis.html",
-    "href": "projects/ceew analysis.html",
+    "objectID": "projects/ceew.html",
+    "href": "projects/ceew.html",
     "title": "Analyzing Decentralized Renewable Energy Impacts",
     "section": "",
     "text": "This post highlights a data science project analyzing the real-world impacts of decentralized renewable energy (DRE) technologies in India. Leveraging user-level evidence collected by the Council on Energy, Environment and Water (CEEW), I explored how DRE access varied across gender and states — and how it related to reported changes in household income.\nThe analysis aimed to answer: Who is using DRE? and What are the livelihood outcomes? I used R to clean, visualize, and interpret the data, with a focus on two questions: 1. Do women benefit differently from DRE access? 2. How does adoption differ by technology and state?"
   },
   {
-    "objectID": "projects/ceew analysis.html#overview",
-    "href": "projects/ceew analysis.html#overview",
+    "objectID": "projects/ceew.html#overview",
+    "href": "projects/ceew.html#overview",
     "title": "Analyzing Decentralized Renewable Energy Impacts",
     "section": "",
     "text": "This post highlights a data science project analyzing the real-world impacts of decentralized renewable energy (DRE) technologies in India. Leveraging user-level evidence collected by the Council on Energy, Environment and Water (CEEW), I explored how DRE access varied across gender and states — and how it related to reported changes in household income.\nThe analysis aimed to answer: Who is using DRE? and What are the livelihood outcomes? I used R to clean, visualize, and interpret the data, with a focus on two questions: 1. Do women benefit differently from DRE access? 2. How does adoption differ by technology and state?"
   },
   {
-    "objectID": "projects/ceew analysis.html#visualization-1-income-change-by-gender",
-    "href": "projects/ceew analysis.html#visualization-1-income-change-by-gender",
+    "objectID": "projects/ceew.html#visualization-1-income-change-by-gender",
+    "href": "projects/ceew.html#visualization-1-income-change-by-gender",
     "title": "Analyzing Decentralized Renewable Energy Impacts",
     "section": "📊 Visualization 1: Income Change by Gender",
     "text": "📊 Visualization 1: Income Change by Gender\n# Load ggplot2\nlibrary(ggplot2)\n\n# Stacked bar chart - income change by gender\nggplot(gender_data, aes(x = Gender, fill = IncomeChange)) +\n  geom_bar(position = \"fill\") +\n  labs(\n    title = \"Reported Income Change by Gender\",\n    x = \"Gender\",\n    y = \"Percentage of Users\",\n    fill = \"Income Change\"\n  ) +\n  scale_y_continuous(labels = scales::percent)\n\nInterpretation: The vast majority of users — regardless of gender — reported increased income from DRE adoption. Interestingly, women were slightly more likely than men to report financial gain, suggesting DRE may help narrow gender income gaps in rural areas."
   },
   {
-    "objectID": "projects/ceew analysis.html#visualization-2-technology-type-by-state",
-    "href": "projects/ceew analysis.html#visualization-2-technology-type-by-state",
+    "objectID": "projects/ceew.html#visualization-2-technology-type-by-state",
+    "href": "projects/ceew.html#visualization-2-technology-type-by-state",
     "title": "Analyzing Decentralized Renewable Energy Impacts",
     "section": "📊 Visualization 2: Technology Type by State",
     "text": "📊 Visualization 2: Technology Type by State\n# Horizontal bar chart - DRE tech by state\n\nggplot(state_data, aes(x = State, fill = Technology)) +\n  geom_bar(position = \"dodge\") +\n  labs(\n    title = \"DRE Technology Adoption by State\",\n    x = \"State\",\n    y = \"Number of Users\",\n    fill = \"Technology\"\n  ) +\n  coord_flip()\n\nInterpretation: This plot shows that different states have adopted different DRE solutions. Uttar Pradesh leads in solar refrigerator use, while Odisha has widespread adoption of solar pumps. These trends could reflect regional policy support, agriculture needs, and program implementation models."
   },
   {
-    "objectID": "projects/ceew analysis.html#takeaways",
-    "href": "projects/ceew analysis.html#takeaways",
+    "objectID": "projects/ceew.html#takeaways",
+    "href": "projects/ceew.html#takeaways",
     "title": "Analyzing Decentralized Renewable Energy Impacts",
     "section": "💡 Takeaways",
     "text": "💡 Takeaways\n\nDRE is working: Most users reported increased income post-adoption, reinforcing the link between clean energy and livelihoods.\nWomen benefit too: Female users reported slightly higher income benefits, making a case for scaling gender-inclusive DRE programs.\nCustomization matters: Adoption patterns vary by region and technology — one-size-fits-all programs may miss local needs."
   },
   {
-    "objectID": "projects/ceew analysis.html#notes",
-    "href": "projects/ceew analysis.html#notes",
+    "objectID": "projects/ceew.html#notes",
+    "href": "projects/ceew.html#notes",
     "title": "Analyzing Decentralized Renewable Energy Impacts",
     "section": "📁 Notes",
     "text": "📁 Notes\n\nData Source: CEEW’s Powering Livelihoods initiative\nTools Used: R, ggplot2, dplyr\nProject Type: Exploratory Data Analysis, Policy-Relevant Visualization"
