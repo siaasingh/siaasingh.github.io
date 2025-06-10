@@ -1,6 +1,16 @@
 ---
-title: "projects"
+title: "Projects!"
 format: html
+listing:
+  contents: projects
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
 ---
 
-Coming soon!
+## 🔌 Can Microgrids Power the Global South?
+
+A Q&A-style carbon brief exploring microgrids as a tool for both carbon mitigation and rural empowerment!
+
+[Read more](projects/microgrids.qmd)

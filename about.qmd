@@ -19,15 +19,8 @@ Travel has been a huge part of my life — from Kerala’s backwaters to Santa B
 
 I have always been the type to never sit still. I grew up playing Table Tennis, Soccer and Water Polo. In college I joined UCSB Taara - a nationally competitive bollywood fusion dance team. This has been a great way to connect with my culture while also finding value in movement. I also love working out in particular Yoga Sculpts and hope to become an instructor one day! 
 
-![Taara Performance](./images/dance2.jpg){width=300px}
 
-
-
-
-
-
-
-
+![](images/taara.png){width=300px}
 
 
 

@@ -1,0 +1,30 @@
+---
+title: "Can Microgrids Power the Global South?"
+author: "Siaa Singh"
+date: 2025-06-10
+categories: [energy access, climate mitigation, global south]
+format: html
+---
+
+<a href="../pdf/microgrids-qna.pdf" target="_blank" style="padding: 10px 15px; background-color: #1e90ff; color: white; text-decoration: none; border-radius: 5px;">
+📄 View Full PDF
+</a>
+
+## Introduction
+
+In the Global South, millions still lack access to electricity. Extending central grids is often not feasible due to terrain, cost, or infrastructure gaps. Microgrids — decentralized, often solar-powered systems — provide a clean, scalable alternative. This blog post draws from a Q&A-style analysis conducted for ES 145, highlighting microgrids’ role in alleviating energy poverty and mitigating climate change.
+
+## Key Takeaways
+
+- Microgrids last 7–10+ years, with periodic battery replacement being the biggest cost.
+- Case studies from India, Nepal, and West Africa show large-scale viability.
+- Solar microgrids emit 95% less CO₂ than diesel-based systems.
+- Microgrids improve rural incomes, job access, and women’s empowerment.
+- The levelized cost of energy (LCOE) is cheaper for solar microgrids than diesel.
+- Please view attached pdf for figures!
+
+## Final Thoughts
+
+Microgrids are not just an interim solution — they’re a cornerstone for energy justice, sustainability, and resilience in the Global South. Backed by supportive policy, local ownership, and sustainable financing, they can align access and mitigation goals for 2030 and beyond.
+
+

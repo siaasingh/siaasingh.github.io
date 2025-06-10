@@ -7,6 +7,34 @@
     "text": "Hi, I’m Siaa 👋\nI’m a senior Environmental Science major at UC Santa Barbara passionate about data-driven solutions for clean energy and environmental equity.\n\n🌱 Intern @ California Energy Commission (Transportation Electrification)\n📚 Projects: Environmental Justice in UCSB curriculum, Micro Grids as mitigation strategies in the Global South\n🌍 Interested in energy access, marine conservation, and climate policy\n\nThis site is a portfolio of my work and interests — feel free to explore!"
   },
   {
+    "objectID": "projects/microgrids.html",
+    "href": "projects/microgrids.html",
+    "title": "Can Microgrids Power the Global South?",
+    "section": "",
+    "text": "📄 View Full PDF"
+  },
+  {
+    "objectID": "projects/microgrids.html#introduction",
+    "href": "projects/microgrids.html#introduction",
+    "title": "Can Microgrids Power the Global South?",
+    "section": "Introduction",
+    "text": "Introduction\nIn the Global South, millions still lack access to electricity. Extending central grids is often not feasible due to terrain, cost, or infrastructure gaps. Microgrids — decentralized, often solar-powered systems — provide a clean, scalable alternative. This blog post draws from a Q&A-style analysis conducted for ES 145, highlighting microgrids’ role in alleviating energy poverty and mitigating climate change."
+  },
+  {
+    "objectID": "projects/microgrids.html#key-takeaways",
+    "href": "projects/microgrids.html#key-takeaways",
+    "title": "Can Microgrids Power the Global South?",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nMicrogrids last 7–10+ years, with periodic battery replacement being the biggest cost.\nCase studies from India, Nepal, and West Africa show large-scale viability.\nSolar microgrids emit 95% less CO₂ than diesel-based systems.\nMicrogrids improve rural incomes, job access, and women’s empowerment.\nThe levelized cost of energy (LCOE) is cheaper for solar microgrids than diesel.\nPlease view attached pdf for figures!"
+  },
+  {
+    "objectID": "projects/microgrids.html#final-thoughts",
+    "href": "projects/microgrids.html#final-thoughts",
+    "title": "Can Microgrids Power the Global South?",
+    "section": "Final Thoughts",
+    "text": "Final Thoughts\nMicrogrids are not just an interim solution — they’re a cornerstone for energy justice, sustainability, and resilience in the Global South. Backed by supportive policy, local ownership, and sustainable financing, they can align access and mitigation goals for 2030 and beyond."
+  },
+  {
     "objectID": "resume.html",
     "href": "resume.html",
     "title": "Resume",
@@ -37,9 +65,16 @@
   {
     "objectID": "projects.html",
     "href": "projects.html",
-    "title": "projects",
+    "title": "Projects!",
     "section": "",
-    "text": "Coming soon!"
+    "text": "A Q&A-style carbon brief exploring microgrids as a tool for both carbon mitigation and rural empowerment!\nRead more"
+  },
+  {
+    "objectID": "projects.html#can-microgrids-power-the-global-south",
+    "href": "projects.html#can-microgrids-power-the-global-south",
+    "title": "Projects!",
+    "section": "",
+    "text": "A Q&A-style carbon brief exploring microgrids as a tool for both carbon mitigation and rural empowerment!\nRead more"
   },
   {
     "objectID": "about.html",
