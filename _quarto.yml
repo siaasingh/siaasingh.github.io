@@ -1,14 +1,23 @@
+project:
+  type: website
+
 website:
   title: "Siaa Singh"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About Me
-      - href: projects.qmd
-        text: Projects
-      - href: free.qmd
-        text: Free For All
-      - href: resume.qmd
-        text: Resume
+      - text: "Home"
+        file: index.qmd
+      - text: "About Me"
+        file: about.qmd
+      - text: "Projects"
+        file: projects.qmd
+      - text: "Free For All"
+        file: free.qmd
+      - text: "Resume"
+        file: resume.qmd
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true
