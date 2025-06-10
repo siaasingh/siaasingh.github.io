@@ -14,3 +14,9 @@ listing:
 A Q&A-style carbon brief exploring microgrids as a tool for both carbon mitigation and rural empowerment!
 
 [Read more](projects/microgrids.qmd)
+
+## 💻 CEEW Data Analysis: Income & Technology Access
+
+This project analyzes survey data from the Council on Energy, Environment and Water (CEEW) to understand how decentralized renewable energy (DRE) technologies affect income and adoption across gender and Indian states.
+
+➡️ [Read more](projects/ceew.qmd)

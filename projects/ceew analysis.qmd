@@ -1,0 +1,81 @@
+---
+title: "Analyzing Decentralized Renewable Energy Impacts"
+author: "Siaa Singh"
+date: 2025-06-10
+categories: [DRE, CEEW, livelihoods, energy access]
+format: html
+---
+
+## 🔍 Overview
+
+This post highlights a data science project analyzing the real-world impacts of decentralized renewable energy (DRE) technologies in India. Leveraging user-level evidence collected by the **Council on Energy, Environment and Water (CEEW)**, I explored how DRE access varied across gender and states — and how it related to reported changes in household income.
+
+The analysis aimed to answer: _Who is using DRE?_ and _What are the livelihood outcomes?_ I used `R` to clean, visualize, and interpret the data, with a focus on two questions:
+1. Do women benefit differently from DRE access?
+2. How does adoption differ by technology and state?
+
+---
+
+## 📊 Visualization 1: Income Change by Gender
+
+```r
+# Load ggplot2
+library(ggplot2)
+
+# Stacked bar chart - income change by gender
+ggplot(gender_data, aes(x = Gender, fill = IncomeChange)) +
+  geom_bar(position = "fill") +
+  labs(
+    title = "Reported Income Change by Gender",
+    x = "Gender",
+    y = "Percentage of Users",
+    fill = "Income Change"
+  ) +
+  scale_y_continuous(labels = scales::percent)
+```
+
+![](../images/gender income.png){width=500px}
+
+**Interpretation:** The vast majority of users — regardless of gender — reported increased income from DRE adoption. Interestingly, women were slightly more likely than men to report financial gain, suggesting DRE may help narrow gender income gaps in rural areas.
+
+---
+
+## 📊 Visualization 2: Technology Type by State
+
+```r
+# Horizontal bar chart - DRE tech by state
+
+ggplot(state_data, aes(x = State, fill = Technology)) +
+  geom_bar(position = "dodge") +
+  labs(
+    title = "DRE Technology Adoption by State",
+    x = "State",
+    y = "Number of Users",
+    fill = "Technology"
+  ) +
+  coord_flip()
+```
+
+![](../images/DRE.png){width=500px}
+
+**Interpretation:** This plot shows that different states have adopted different DRE solutions. **Uttar Pradesh** leads in solar refrigerator use, while **Odisha** has widespread adoption of solar pumps. These trends could reflect regional policy support, agriculture needs, and program implementation models.
+
+---
+
+## 💡 Takeaways
+
+- **DRE is working:** Most users reported increased income post-adoption, reinforcing the link between clean energy and livelihoods.
+- **Women benefit too:** Female users reported slightly higher income benefits, making a case for scaling gender-inclusive DRE programs.
+- **Customization matters:** Adoption patterns vary by region and technology — one-size-fits-all programs may miss local needs.
+
+---
+
+## 📁 Notes
+
+- Data Source: CEEW’s Powering Livelihoods initiative
+- Tools Used: R, ggplot2, dplyr
+- Project Type: Exploratory Data Analysis, Policy-Relevant Visualization
+
+---
+
+

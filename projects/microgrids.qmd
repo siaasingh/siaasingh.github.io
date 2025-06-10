@@ -10,6 +10,8 @@ format: html
 📄 View Full PDF
 </a>
 
+
+
 ## Introduction
 
 In the Global South, millions still lack access to electricity. Extending central grids is often not feasible due to terrain, cost, or infrastructure gaps. Microgrids — decentralized, often solar-powered systems — provide a clean, scalable alternative. This blog post draws from a Q&A-style analysis conducted for ES 145, highlighting microgrids’ role in alleviating energy poverty and mitigating climate change.
