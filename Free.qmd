@@ -1,30 +1,23 @@
 ---
-
----
-
----
-title: "Free For All"
+title: "Free For All - Dive Adventures"
+author: "Siaa Singh"
+date: 2025-06-10
 format:
   html:
-    theme: minty
-    toc: true
-    code-fold: false
+    theme: lux
+    code-fold: true
     code-tools: false
-execute:
-  echo: false
+    toc: true
+    toc-title: "On this page"
+    toc-location: right
+    echo: false
 ---
 
-# 🎉 Free For All
+# 🌊 My Dive Adventures Around the World
 
-Welcome to the fun corner of my website — a space for hobbies, experiences, and anything else that makes me, *me*! 🌟
+As a certified diver, I've been lucky enough to explore stunning underwater ecosystems across the globe. Below is an **interactive map** showcasing the locations where I've dived — along with my **personal ratings** for biodiversity and coral vibrance, based on what I personally experienced. I hope to continue expanding this list and diving in many more amazing locations!
 
-## 🌊 My Global Dive Sites
-
-Scuba diving has been one of the most incredible ways for me to connect with the underwater world and witness biodiversity up close. Below is a map of the dive sites I've explored around the world — from the reefs of Koh Tao to the shores of Cabo. These are **my personal ratings** based on what I observed during my dives — particularly the **biodiversity** (variety and abundance of marine life) and **coral vibrance** (color, density, and health of coral ecosystems).
-
-I’m always excited to explore more dive sites in the future and hope to expand this map as I keep diving! 🐠💦
-
-```{r}
+```{r, echo=FALSE}
 library(leaflet)
 
 # Create a data frame of your dive sites
@@ -42,21 +35,24 @@ dives <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Create popup content
-dives$popup <- paste0(
-  "<strong>", dives$location, "</strong><br/>",
-  "🧬 Biodiversity Rating: ", dives$biodiversity, "/5<br/>",
-  "🌈 Coral Vibrance: ", dives$coral, "/5"
+# Create popup content with location, biodiversity, and coral ratings
+popup_content <- paste0(
+  "<strong>", dives$location, "</strong><br>",
+  "Biodiversity Rating: ", dives$biodiversity, "/5<br>",
+  "Coral Vibrance Rating: ", dives$coral, "/5"
 )
 
-# Generate the interactive map
-leaflet(data = dives) %>%
+# Generate leaflet map
+leaflet(dives) %>%
   addTiles() %>%
-  addCircleMarkers(
-    ~lng, ~lat,
-    popup = ~popup,
-    radius = 6,
-    color = "deepskyblue",
-    fillOpacity = 0.8
-  )
+  addMarkers(lng = ~lng, lat = ~lat, popup = popup_content)
 ```
+
+------------------------------------------------------------------------
+
+# 🐠 Notes
+
+-   All ratings reflect **my personal experience** based on the day, season, and dive site conditions when I visited.
+-   This map is a work in progress — I hope to add more dive sites as I explore new reefs!
+
+Thanks for checking it out! 🌎🐟
