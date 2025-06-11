@@ -2,11 +2,12 @@
 
 ---
 
-# 
-
 ---
 title: "Free For All"
-format: html
+format:
+  html:
+    theme: minty
+    toc: true
 execute:
   echo: false
 ---
