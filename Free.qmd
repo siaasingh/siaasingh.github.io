@@ -8,6 +8,8 @@ format:
   html:
     theme: minty
     toc: true
+    code-fold: false
+    code-tools: false
 execute:
   echo: false
 ---
