@@ -2,11 +2,13 @@
 
 ---
 
+# 
+
 ---
 title: "Free For All"
-format:
-  html:
-    toc: true
+format: html
+execute:
+  echo: false
 ---
 
 # 🎉 Free For All
