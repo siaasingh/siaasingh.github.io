@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Free for All – Siaa Singh</title>
+<title>free – Siaa Singh</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -66,6 +100,16 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -119,15 +163,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#free-for-all" id="toc-free-for-all" class="nav-link active" data-scroll-target="#free-for-all">🎉 Free For All</a>
+  <ul class="collapse">
+  <li><a href="#my-global-dive-sites" id="toc-my-global-dive-sites" class="nav-link" data-scroll-target="#my-global-dive-sites">🌊 My Global Dive Sites</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Free for All</h1>
+<h1 class="title">Free For All</h1>
 </div>
 
 
@@ -144,8 +197,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<hr>
+<hr>
+<section id="free-for-all" class="level1">
+<h1>🎉 Free For All</h1>
+<p>Welcome to the fun corner of my website — a space for hobbies, experiences, and anything else that makes me, <em>me</em>! 🌟</p>
+<section id="my-global-dive-sites" class="level2">
+<h2 class="anchored" data-anchor-id="my-global-dive-sites">🌊 My Global Dive Sites</h2>
+<p>Scuba diving has been one of the most incredible ways for me to connect with the underwater world and witness biodiversity up close. Below is a map of the dive sites I’ve explored around the world — from the reefs of Koh Tao to the shores of Cabo. These are <strong>my personal ratings</strong> based on what I observed during my dives — particularly the <strong>biodiversity</strong> (variety and abundance of marine life) and <strong>coral vibrance</strong> (color, density, and health of coral ecosystems).</p>
+<p>I’m always excited to explore more dive sites in the future and hope to expand this map as I keep diving! 🐠💦</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame of your dive sites</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>dives <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">location =</span> <span class="fu">c</span>(<span class="st">"Great Barrier Reef, Australia"</span>, <span class="st">"Andaman &amp; Nicobar Islands, India"</span>, <span class="st">"Fiji"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Bahamas"</span>, <span class="st">"Cancun, Mexico"</span>, <span class="st">"Hawaii (Big Island)"</span>, <span class="st">"Hawaii (Kauai)"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Sri Lanka"</span>, <span class="st">"Cabo, Mexico"</span>, <span class="st">"Jamaica"</span>, <span class="st">"Goa, India"</span>, <span class="st">"San Diego, USA"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Koh Tao, Thailand"</span>, <span class="st">"Menjangan, Indonesia"</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">lat =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">16.9186</span>, <span class="fl">11.7401</span>, <span class="sc">-</span><span class="fl">17.7134</span>, <span class="fl">25.0343</span>, <span class="fl">21.1619</span>, <span class="fl">19.5429</span>, <span class="fl">22.0964</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>          <span class="fl">7.8731</span>, <span class="fl">22.8894</span>, <span class="fl">18.1096</span>, <span class="fl">15.2993</span>, <span class="fl">32.7157</span>, <span class="fl">10.0982</span>, <span class="sc">-</span><span class="fl">8.1086</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">lng =</span> <span class="fu">c</span>(<span class="fl">145.7781</span>, <span class="fl">92.6586</span>, <span class="fl">178.0650</span>, <span class="sc">-</span><span class="fl">77.3963</span>, <span class="sc">-</span><span class="fl">86.8515</span>, <span class="sc">-</span><span class="fl">155.6659</span>, <span class="sc">-</span><span class="fl">159.5261</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>          <span class="fl">80.7718</span>, <span class="sc">-</span><span class="fl">109.9159</span>, <span class="sc">-</span><span class="fl">77.2975</span>, <span class="fl">74.1240</span>, <span class="sc">-</span><span class="fl">117.1611</span>, <span class="fl">99.8382</span>, <span class="fl">114.5420</span>),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">biodiversity =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">coral =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">NA</span>, <span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create popup content</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>dives<span class="sc">$</span>popup <span class="ot">&lt;-</span> <span class="fu">paste0</span>(</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;strong&gt;"</span>, dives<span class="sc">$</span>location, <span class="st">"&lt;/strong&gt;&lt;br/&gt;"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"🧬 Biodiversity Rating: "</span>, dives<span class="sc">$</span>biodiversity, <span class="st">"/5&lt;br/&gt;"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"🌈 Coral Vibrance: "</span>, dives<span class="sc">$</span>coral, <span class="st">"/5"</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate the interactive map</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> dives) <span class="sc">%&gt;%</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>lng, <span class="sc">~</span>lat,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span>popup,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">radius =</span> <span class="dv">6</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"deepskyblue"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">fillOpacity =</span> <span class="fl">0.8</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-22e5528fc915b84cda5b" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-22e5528fc915b84cda5b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[-16.9186,11.7401,-17.7134,25.0343,21.1619,19.5429,22.0964,7.8731,22.8894,18.1096,15.2993,32.7157,10.0982,-8.108599999999999],[145.7781,92.65860000000001,178.065,-77.3963,-86.8515,-155.6659,-159.5261,80.7718,-109.9159,-77.2975,74.124,-117.1611,99.8382,114.542],6,null,null,{"interactive":true,"className":"","stroke":true,"color":"deepskyblue","weight":5,"opacity":0.5,"fill":true,"fillColor":"deepskyblue","fillOpacity":0.8},null,null,["<strong>Great Barrier Reef, Australia<\/strong><br/>🧬 Biodiversity Rating: 5/5<br/>🌈 Coral Vibrance: 2/5","<strong>Andaman & Nicobar Islands, India<\/strong><br/>🧬 Biodiversity Rating: 3/5<br/>🌈 Coral Vibrance: 4/5","<strong>Fiji<\/strong><br/>🧬 Biodiversity Rating: 3/5<br/>🌈 Coral Vibrance: 5/5","<strong>Bahamas<\/strong><br/>🧬 Biodiversity Rating: 5/5<br/>🌈 Coral Vibrance: 3/5","<strong>Cancun, Mexico<\/strong><br/>🧬 Biodiversity Rating: 5/5<br/>🌈 Coral Vibrance: 4/5","<strong>Hawaii (Big Island)<\/strong><br/>🧬 Biodiversity Rating: 5/5<br/>🌈 Coral Vibrance: 2/5","<strong>Hawaii (Kauai)<\/strong><br/>🧬 Biodiversity Rating: 5/5<br/>🌈 Coral Vibrance: 5/5","<strong>Sri Lanka<\/strong><br/>🧬 Biodiversity Rating: 3/5<br/>🌈 Coral Vibrance: 4/5","<strong>Cabo, Mexico<\/strong><br/>🧬 Biodiversity Rating: 5/5<br/>🌈 Coral Vibrance: 3/5","<strong>Jamaica<\/strong><br/>🧬 Biodiversity Rating: 3/5<br/>🌈 Coral Vibrance: 3/5","<strong>Goa, India<\/strong><br/>🧬 Biodiversity Rating: 2/5<br/>🌈 Coral Vibrance: 2/5","<strong>San Diego, USA<\/strong><br/>🧬 Biodiversity Rating: 2/5<br/>🌈 Coral Vibrance: NA/5","<strong>Koh Tao, Thailand<\/strong><br/>🧬 Biodiversity Rating: 5/5<br/>🌈 Coral Vibrance: 5/5","<strong>Menjangan, Indonesia<\/strong><br/>🧬 Biodiversity Rating: 5/5<br/>🌈 Coral Vibrance: 5/5"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-17.7134,32.7157],"lng":[-159.5261,178.065]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

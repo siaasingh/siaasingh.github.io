@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "free.html#my-global-dive-sites",
+    "href": "free.html#my-global-dive-sites",
+    "title": "Free For All",
+    "section": "🌊 My Global Dive Sites",
+    "text": "🌊 My Global Dive Sites\nScuba diving has been one of the most incredible ways for me to connect with the underwater world and witness biodiversity up close. Below is a map of the dive sites I’ve explored around the world — from the reefs of Koh Tao to the shores of Cabo. These are my personal ratings based on what I observed during my dives — particularly the biodiversity (variety and abundance of marine life) and coral vibrance (color, density, and health of coral ecosystems).\nI’m always excited to explore more dive sites in the future and hope to expand this map as I keep diving! 🐠💦\n\nlibrary(leaflet)\n\n# Create a data frame of your dive sites\ndives &lt;- data.frame(\n  location = c(\"Great Barrier Reef, Australia\", \"Andaman & Nicobar Islands, India\", \"Fiji\",\n               \"Bahamas\", \"Cancun, Mexico\", \"Hawaii (Big Island)\", \"Hawaii (Kauai)\",\n               \"Sri Lanka\", \"Cabo, Mexico\", \"Jamaica\", \"Goa, India\", \"San Diego, USA\",\n               \"Koh Tao, Thailand\", \"Menjangan, Indonesia\"),\n  lat = c(-16.9186, 11.7401, -17.7134, 25.0343, 21.1619, 19.5429, 22.0964,\n          7.8731, 22.8894, 18.1096, 15.2993, 32.7157, 10.0982, -8.1086),\n  lng = c(145.7781, 92.6586, 178.0650, -77.3963, -86.8515, -155.6659, -159.5261,\n          80.7718, -109.9159, -77.2975, 74.1240, -117.1611, 99.8382, 114.5420),\n  biodiversity = c(5, 3, 3, 5, 5, 5, 5, 3, 5, 3, 2, 2, 5, 5),\n  coral = c(2, 4, 5, 3, 4, 2, 5, 4, 3, 3, 2, NA, 5, 5),\n  stringsAsFactors = FALSE\n)\n\n# Create popup content\ndives$popup &lt;- paste0(\n  \"&lt;strong&gt;\", dives$location, \"&lt;/strong&gt;&lt;br/&gt;\",\n  \"🧬 Biodiversity Rating: \", dives$biodiversity, \"/5&lt;br/&gt;\",\n  \"🌈 Coral Vibrance: \", dives$coral, \"/5\"\n)\n\n# Generate the interactive map\nleaflet(data = dives) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    ~lng, ~lat,\n    popup = ~popup,\n    radius = 6,\n    color = \"deepskyblue\",\n    fillOpacity = 0.8\n  )"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome!",
@@ -25,7 +32,7 @@
     "href": "projects/ceew.html#visualization-1-income-change-by-gender",
     "title": "Analyzing Decentralized Renewable Energy Impacts",
     "section": "📊 Visualization 1: Income Change by Gender",
-    "text": "📊 Visualization 1: Income Change by Gender\n# Load ggplot2\nlibrary(ggplot2)\n\n# Stacked bar chart - income change by gender\nggplot(gender_data, aes(x = Gender, fill = IncomeChange)) +\n  geom_bar(position = \"fill\") +\n  labs(\n    title = \"Reported Income Change by Gender\",\n    x = \"Gender\",\n    y = \"Percentage of Users\",\n    fill = \"Income Change\"\n  ) +\n  scale_y_continuous(labels = scales::percent)\n\nInterpretation: The vast majority of users — regardless of gender — reported increased income from DRE adoption. Interestingly, women were slightly more likely than men to report financial gain, suggesting DRE may help narrow gender income gaps in rural areas."
+    "text": "📊 Visualization 1: Income Change by Gender\n# Load ggplot2\nlibrary(ggplot2)\n\n# Stacked bar chart - income change by gender\nggplot(gender_data, aes(x = Gender, fill = IncomeChange)) +\n  geom_bar(position = \"fill\") +\n  labs(\n    title = \"Reported Income Change by Gender\",\n    x = \"Gender\",\n    y = \"Percentage of Users\",\n    fill = \"Income Change\"\n  ) +\n  scale_y_continuous(labels = scales::percent)\n\nInterpretation: The vast majority of users — regardless of gender — reported increased income from DRE adoption. Interestingly, women were slightly more likely than men to report financial gain, suggesting DRE may help narrow gender income gaps in rural areas. Women also answered ” i don’t know” which could reflect trends that underscore the importance of financial literacy for women!"
   },
   {
     "objectID": "projects/ceew.html#visualization-2-technology-type-by-state",
@@ -39,7 +46,7 @@
     "href": "projects/ceew.html#takeaways",
     "title": "Analyzing Decentralized Renewable Energy Impacts",
     "section": "💡 Takeaways",
-    "text": "💡 Takeaways\n\nDRE is working: Most users reported increased income post-adoption, reinforcing the link between clean energy and livelihoods.\nWomen benefit too: Female users reported slightly higher income benefits, making a case for scaling gender-inclusive DRE programs.\nCustomization matters: Adoption patterns vary by region and technology — one-size-fits-all programs may miss local needs."
+    "text": "💡 Takeaways\n\nDRE is working: Most users reported increased income post-adoption, reinforcing the link between clean energy and livelihoods.\nWomen benefit too: Female users reported slightly higher income benefits, making a case for scaling gender-inclusive DRE programs. There is still a strong need for\nCustomization matters: Adoption patterns vary by region and technology — one-size-fits-all programs may miss local needs."
   },
   {
     "objectID": "projects/ceew.html#notes",

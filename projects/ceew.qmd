@@ -36,7 +36,7 @@ ggplot(gender_data, aes(x = Gender, fill = IncomeChange)) +
 
 ![](../images/gender income.png){width=500px}
 
-**Interpretation:** The vast majority of users — regardless of gender — reported increased income from DRE adoption. Interestingly, women were slightly more likely than men to report financial gain, suggesting DRE may help narrow gender income gaps in rural areas.
+**Interpretation:** The vast majority of users — regardless of gender — reported increased income from DRE adoption. Interestingly, women were slightly more likely than men to report financial gain, suggesting DRE may help narrow gender income gaps in rural areas. Women also answered " i don't know" which could reflect trends that underscore the importance of financial literacy for women! 
 
 ---
 
@@ -65,7 +65,7 @@ ggplot(state_data, aes(x = State, fill = Technology)) +
 ## 💡 Takeaways
 
 - **DRE is working:** Most users reported increased income post-adoption, reinforcing the link between clean energy and livelihoods.
-- **Women benefit too:** Female users reported slightly higher income benefits, making a case for scaling gender-inclusive DRE programs.
+- **Women benefit too:** Female users reported slightly higher income benefits, making a case for scaling gender-inclusive DRE programs. There is still a strong need for 
 - **Customization matters:** Adoption patterns vary by region and technology — one-size-fits-all programs may miss local needs.
 
 ---
